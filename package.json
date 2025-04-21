@@ -1,0 +1,12 @@
+{
+  "name": "pokesite-rc2",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "David Caballer, Claudio Gonzalez",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
