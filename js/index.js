@@ -44,26 +44,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         loadPokecards(pokedex, offset, limit, language);
     });
 
-    // Eventos de paginación
-    const prevButton = document.querySelector('#prev');
-    prevButton.addEventListener('click', () => {
-        if (offset > 0) {
-            offset -= limit;
-            loadPokecards(pokedex, offset, limit, language);
-        }
+    // Eventos de paginación para botones de la categoría .prev
+    const prevButtons = document.querySelectorAll('.prev');
+    prevButtons.forEach(prevButton => {
+        prevButton.addEventListener('click', () => {
+            if (offset > 0) {
+                offset -= limit;
+                loadPokecards(pokedex, offset, limit, language);
+            }
+        });
+    });
 
-        prevButton.scrollIntoView(); // Desplazar hacia arriba al cargar más pokecards
-    })
-    
-    const nextButton = document.querySelector('#next');
-    nextButton.addEventListener('click', () => {
-        if (offset < totalPokemons - limit) {
-            offset += limit;
-            loadPokecards(pokedex, offset, limit, language);
-        }
-
-        nextButton.scrollIntoView();
-    })
+    // Eventos de paginación para botones de la categoría .next
+    const nextButtons = document.querySelectorAll('.next');
+    nextButtons.forEach(nextButton => {
+        nextButton.addEventListener('click', () => {
+            if (offset < totalPokemons - limit) {
+                offset += limit;
+                loadPokecards(pokedex, offset, limit, language);
+            }  
+        });
+    });
 
     // Eventos del dropdown
     dropdown.addEventListener('change', async (event) => {

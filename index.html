@@ -45,7 +45,7 @@
                         <li>
                             <!-- Dropdown para seleccionar un Pokémon -->
                             <label for="pokemon-select">Selecciona un Pokémon:</label>
-                            <select class="pokemon-select" id="pokemon-select">
+                            <select id="pokemon-select">
                                 <option value="bulbasaur">Bulbasaur</option>
                                 <option value="charmander">Charmander</option>
                                 <option value="squirtle">Squirtle</option>
@@ -66,10 +66,10 @@
                         </li>
                         <li class="navigation">
                             <!-- Botones de navegación -->
-                            <button id="prev" class="nav-button" aria-label="Anterior">
+                            <button class="prev nav-button" aria-label="Anterior">
                                 <i class='bx bx-left-arrow-alt' ></i>
                             </button>
-                            <button id="next" class="nav-button" aria-label="Siguiente">
+                            <button class="next nav-button" aria-label="Siguiente">
                                 <i class='bx bx-right-arrow-alt'></i>
                             </button>
                         </li>
@@ -81,6 +81,17 @@
                     <div id="pokecards-container" class="pokecards-containter">
                         
                     </div>
+
+                    <div class="navigation phone-only">
+                        <!-- Botones de navegación -->
+                        <button class="prev nav-button" aria-label="Anterior">
+                            <i class='bx bx-left-arrow-alt' ></i>
+                        </button>
+                        <button class="next nav-button" aria-label="Siguiente">
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                    </>
+
                     <i id="loading-icon" class='bx bx-loader-alt bx-spin'></i>
                 </section>
             </div>

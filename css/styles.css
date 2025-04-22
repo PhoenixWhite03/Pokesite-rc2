@@ -14,7 +14,7 @@
     --type-normal: #cbcb9e;
     --type-fire: #FF4500;
     --type-water: #1E90FF;
-    --type-grass: #98FB98;
+    --type-grass: #53e153;
     --type-electric: #FFFF00;
     --type-ice: #d1ffff;
     --type-fighting: rgb(226, 112, 30);
@@ -138,7 +138,7 @@ body {
 .navigation{
     display: flex;
     gap: 1rem;
-    justify-self: flex-end;
+    align-self: center;
 }
 
 .nav-button {
@@ -158,9 +158,11 @@ body {
 }
 
 select {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    
     background: var(--primary-color);
     border: none;
-    font-size: 1.2rem;
     padding: 0.3rem; 
     border-radius: 1rem;
 
@@ -180,7 +182,15 @@ select {
     transition: background-color 0.3s ease;
  }
 
+ .phone-only {
+    display: none;
+ }
+
  @media screen and (max-width: 768px) {
+    .phone-only {
+        display: block;
+    }
+
     .section {
         padding: 2rem;
     }

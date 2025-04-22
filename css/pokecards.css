@@ -77,8 +77,10 @@
 }
 
 #idtipo{
+    text-transform: uppercase;
+    font-weight: 600;
     border-radius: 100vmax;
-    padding: 0rem 1rem 0.25rem 1rem;
+    padding: 0rem 1rem 0.1rem 1rem;
 }
 
 
@@ -87,6 +89,7 @@
     justify-content: center;
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    font-weight: 500;
 }
 .p-ability-list{
     display: flex;
@@ -94,6 +97,7 @@
     justify-content: center;
     gap: 1rem;
     list-style: none;
+    font-weight: 400;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
