@@ -5,83 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeSite</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/pokecards.css">
+    <link rel="stylesheet" href="./css/colors.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="grid">
         <header class="header">
             <div class="container">
-                <h1>Bienvenido a PokeSite</h1>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#pokedex">Pokédex</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
+                <a href="./index.html">
+                    <img class="header-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png" alt="pokeball">
+                </a>
+                <h1 class="header-title">Bienvenido a PokeSite</h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#start">Inicio</a></li>
+                        <li><a href="#pokedex">Pokédex</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
 
         <main class="main">
             <div class="container">
-                <section id="inicio">
-                    <h2>Inicio</h2>
-                    <p>Explora el mundo de los Pokémon y descubre información sobre tus favoritos.</p>
-                    <img src="images/pikachu.png" alt="Pikachu">
+                <section class="section start" id="start">
+                    <div class="start-text">
+                        <h2>Inicio</h2>
+                        <hr>
+                        <p>Explora el mundo de los Pokémon y descubre información sobre tus favoritos.</p>
+                    </div>
+                    <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/025.png" alt="Pikachu">
                 </section>
             
-                <section id="pokedex">
+                <section class="section pokedex" id="pokedex">
                     <h2>Pokédex</h2>
-                    <!-- Dropdown para seleccionar un Pokémon -->
-                    <label for="pokemon-select">Selecciona un Pokémon:</label>
-                    <select id="pokemon-select">
-                        <option value="bulbasaur">Bulbasaur</option>
-                        <option value="charmander">Charmander</option>
-                        <option value="squirtle">Squirtle</option>
-                    </select>
-                    <button id="reload-button">Reiniciar</button>
+                    <ul class="pokedex-menu">
+                        <li>
+                            <!-- Dropdown para seleccionar un Pokémon -->
+                            <label for="pokemon-select">Selecciona un Pokémon:</label>
+                            <select class="pokemon-select" id="pokemon-select">
+                                <option value="bulbasaur">Bulbasaur</option>
+                                <option value="charmander">Charmander</option>
+                                <option value="squirtle">Squirtle</option>
+                            </select>
+                        </li>
+                        <li>
+                            <!-- Dropdown para seleccionar el idioma -->
+                            <label for="language-select">Selecciona el idioma:</label>
+                            <select id="language-select">
+                                <option value="es" selected>Español</option>
+                                <option value="en">Inglés</option>
+                                <option value="fr">Francés</option>
+                                <option value="de">Alemán</option>
+                            </select>
+                        </li>
+                        <li>
+                            <button id="reload-button">Reiniciar</button>
+                        </li>
+                        <li class="navigation">
+                            <!-- Botones de navegación -->
+                            <button id="prev" class="nav-button" aria-label="Anterior">
+                                <i class='bx bx-left-arrow-alt' ></i>
+                            </button>
+                            <button id="next" class="nav-button" aria-label="Siguiente">
+                                <i class='bx bx-right-arrow-alt'></i>
+                            </button>
+                        </li>
+                    </ul>
 
-                    <!-- Dropdown para seleccionar el idioma -->
-                    <label for="language-select">Selecciona el idioma:</label>
-                    <select id="language-select">
-                        <option value="es" selected>Español</option>
-                        <option value="en">Inglés</option>
-                        <option value="fr">Francés</option>
-                        <option value="de">Alemán</option>
-                    </select>
+                    <hr>
 
                     <!-- Cards -->
                     <div id="pokecards-container" class="pokecards-containter">
+                        
                     </div>
-            
-                    <!-- Botones de navegación -->
-                    <div class="navigation">
-                        <button id="prev" aria-label="Anterior">&larr;</button>
-                        <button id="next" aria-label="Siguiente">&rarr;</button>
-                    </div>
-                </section>
-            
-                <section id="contacto">
-                    <h2>Contacto</h2>
-                    <form action="#" method="post">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                        <label for="email">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                        <button type="submit">Enviar</button>
-                    </form>
+                    <i id="loading-icon" class='bx bx-loader-alt bx-spin'></i>
                 </section>
             </div>
         </main>
     
         <footer class="footer">
             <div class="container">
-                <p>Desarrollado por [Tu Nombre]</p>
-                <p><a href="#inicio">Volver al inicio</a></p>
-                <p><a href="#contacto">Contáctanos</a></p>
-                <p>&copy; 2025 PokeSite. Todos los derechos reservados.</p>
+            <p>Desarrollado por David Caballero y Claudio Gonzalez</p>
+            <p><a href="#inicio">Volver al inicio</a></p>
+            <p><a href="#pokedex">Ir a la Pokédex</a></p>
+            <div class="social-media">
+                <p>Síguenos en nuestras redes sociales:</p>
+                <div>
+                    <p>David Caballero:</p>
+                    <a href="https://twitter.com/d_degea" target="_blank" aria-label="Twitter de David Caballero">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                    <a href="https://github.com/phoenixwhite03" target="_blank" aria-label="GitHub de David Caballero">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
+                <div>
+                    <p>Claudio Gonzalez:</p>
+                    <a href="https://twitter.com/c1audiobravo" target="_blank" aria-label="Twitter de Claudio Gonzalez">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                    <a href="https://github.com/claudiogonzalez" target="_blank" aria-label="GitHub de Claudio Gonzalez">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
+            </div>
+            <p>&copy; 2025 PokeSite. Todos los derechos reservados.</p>
             </div>
         </footer>
     </div>
