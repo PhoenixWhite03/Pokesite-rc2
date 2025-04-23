@@ -71,7 +71,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         dropdown.scrollIntoView();
 
         if (event.target.value === 'all') {
-            offset = 0; // Reiniciar el offset al seleccionar "Ver todos los Pokémon"
             loadPokecards(pokedex, offset, limit, language);
             return;
         }
